@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamBlocks | Servidor Minecraft</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos minimalistas */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Animación de partículas (fondo) */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #121212;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Sección IP */
+        .server-info {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(5px);
+            border: 1px solid #00ffaa;
+        }
+
+        h1 {
+            color: #00ffaa;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-item {
+            margin: 1rem 0;
+            font-size: 1.2rem;
+        }
+
+        /* Cuadrícula de eventos */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .event-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid #333;
+            transition: transform 0.3s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            border-color: #00ffaa;
+        }
+
+        .event-title {
+            color: #00ffaa;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-date {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 3rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fondo animado con partículas -->
+    <div id="particles-js"></div>
+
+    <!-- Contenido -->
+    <div class="container">
+        <div class="server-info">
+            <h1>DreamBlocks</h1>
+            <div class="info-item">
+                <strong>IP:</strong> <code>play.dreamblocks.com</code>
+            </div>
+            <div class="info-item">
+                <strong>Versión:</strong> 1.20.1
+            </div>
+            <div class="info-item">
+                <strong>Jugadores en línea:</strong> 14/50
+            </div>
+        </div>
+
+        <h2>Próximos Eventos</h2>
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-title">Torneo PvP</div>
+                <div class="event-date">15 Diciembre 2023</div>
+                <p>¡Supervivencia extrema con premios!</p>
+            </div>
+            <div class="event-card">
+                <div class="event-title">Construcción en Equipo</div>
+                <div class="event-date">22 Diciembre 2023</div>
+                <p>Construye la mejor ciudad con amigos.</p>
+            </div>
+            <div class="event-card">
+                <div class="event-title">Evento Navideño</div>
+                <div class="event-date">24 Diciembre 2023</div>
+                <p>Regalos y sorpresas para todos.</p>
+            </div>
+        </div>
+
+        <footer>
+            © 2023 DreamBlocks. Todos los derechos reservados.
+        </footer>
+    </div>
+
+    <!-- Script de partículas (animación) -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Configuración del fondo de partículas
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#00ffaa" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5, "random": true },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#00ffaa", "opacity": 0.3, "width": 1 },
+                "move": { "enable": true, "speed": 2, "direction": "none", "random": true, "straight": false, "out_mode": "out" }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "repulse" },
+                    "onclick": { "enable": true, "mode": "push" }
+                }
+            }
+        });
+    </script>
+</body>
+  </html>
